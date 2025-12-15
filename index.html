@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tutorial - Computational Intelligence Approaches to AI Ethics and Governance</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+            color: #222;
+        }
+
+        .page-wrapper {
+            width: 100%;
+        }
+
+        .content-wrapper {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        .banner {
+            width: 100%;
+        }
+
+        .banner img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .nav-bar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            background-color: #fafafa;
+        }
+
+        .nav-item {
+            flex: 1 1 120px;
+            text-align: center;
+            padding: 12px 8px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            font-size: 15px;
+            cursor: pointer;
+            border-right: 1px solid #eee;
+        }
+
+        .nav-item:last-child {
+            border-right: none;
+        }
+
+        .nav-item:hover {
+            background-color: #f0f0f0;
+        }
+
+        .nav-item.active {
+            background-color: #004b8d;
+            color: #fff;
+        }
+
+        .main-content {
+            padding: 20px 16px 32px;
+        }
+
+        h1 {
+            margin-top: 24px;
+            margin-bottom: 24px;
+            font-size: 28px;
+            color: #004b8d;
+            text-align:justify;
+            /*color: #004b8d;*/
+        }
+
+        .h1sub {
+            margin-top: 24px;
+            margin-bottom: 12px;
+            font-size: 20px;
+            color: #222;
+            text-align:justify;
+        }
+
+        h2 {
+            margin-top: 24px;
+            margin-bottom: 12px;
+            font-size: 24px;
+            color: #004b8d;
+            text-align:justify;
+        }
+
+        h3 {
+            margin-top: 24px;
+            margin-bottom: 12px;
+            font-size: 20px;
+            /*color: #004b8d;*/
+            text-align:justify;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: #eee;
+        }
+
+        p {
+            margin: 0 0 1em;
+            font-size: 16px;
+            text-align:justify;
+        }
+
+        .speakers {
+            margin-top: 16px;
+        }
+
+        .speaker-card {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            padding: 16px 0;
+            border-top: 1px solid #eee;
+        }
+
+        .speaker-card:first-child {
+            border-top: none;
+        }
+
+        .speaker-photo {
+            flex: 0 0 140px;
+            max-width: 140px;
+            margin-right: 16px;
+            margin-bottom: 12px;
+        }
+
+        .speaker-photo img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            object-fit: cover;
+        }
+
+        .speaker-info {
+            flex: 1 1 200px;
+            min-width: 0;
+        }
+
+        .speaker-name {
+            font-weight: 600;
+            margin-bottom: 4px;
+            font-size: 20px;
+        }
+
+        .speaker-affiliation {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 8px;
+        }
+
+        .tab-panel {
+            display: none;
+        }
+
+        .tab-panel.active {
+            display: block;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-top: 6px;
+            margin-bottom: 12px;
+        }
+
+        .image-container {
+            width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 1000px) {
+            .content-wrapper {
+                box-shadow: none;
+            }
+
+            .main-content {
+                padding: 16px 12px 24px;
+            }
+
+            .speaker-card {
+                flex-direction: column;
+            }
+
+            .speaker-photo {
+                margin-right: 0;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            .nav-item {
+                font-size: 14px;
+                padding: 10px 6px;
+            }
+        
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrapper">
+    <div class="content-wrapper">
+
+        <!-- 顶部 Banner，替换为你的宣传图 -->
+        <div class="banner">
+            <img src="assets/WCCI_banner.jpg" alt="WCCI Tutorial Banner">
+        </div>
+
+        <!-- 导航 -->
+        <nav class="nav-bar">
+            <a class="nav-item active" data-target="home">Home</a>
+            <a class="nav-item" data-target="outline">Outline</a>
+            <a class="nav-item" data-target="wcci2026">WCCI 2026</a>
+        </nav>
+
+        <main class="main-content">
+
+            <!-- Home：Abstract & Learning Objectives + Organizers and Speakers -->
+            <section id="home" class="tab-panel active">
+                <h1>Computational Intelligence Approaches to AI Ethics and Governance</h1>
+                <p><span class="h1sub">Tutorial at 2026 IEEE World Congress on Computational Intelligence (WCCI 2026)</span></p>
+                <hr />
+
+                <h2>Abstract and Learning Objectives</h2>
+                <p>
+                    Artificial Intelligence (AI) ethics is a critical and rapidly evolving domain, with fairness and
+                    explainability as its foundational pillars. Many papers and books have been published by
+                    researchers and practitioners from different communities, addressing different aspects of fair
+                    machine learning (FairML) and explainable AI (XAI). However, different papers seem to focus on
+                    different definitions of fairness and explainability and propose different assessment criteria.
+                </p>
+                <p>
+                    An ML model may appear fair according to one assessment criterion but be simultaneously judged
+                    unfair according to another. Furthermore, it is not entirely clear what XAI really means. This
+                    tutorial provides a structured deep dive into these challenges. We will first offer a brief
+                    overview of AI ethics. Then, we will introduce the diverse definitions and measurement criteria for
+                    fairness in machine learning, explore multiobjective approaches to FairML, and highlight specific
+                    fairness concerns in modern systems like Large Language Models (LLMs) and AI in gaming. Finally, we
+                    will articulate what explainability means to different people, at different times and for different
+                    purposes, how evolutionary multi-objective optimisation could be used naturally to enhance
+                    explainability of machine learning models, and how XAI techniques can be used to enhance the
+                    performance of evolutionary algorithms. The tutorial will conclude by synthesizing the interesting
+                    synergies between FairML, XAI, and evolutionary computation, suggesting directions for future
+                    research and practice.
+                </p>
+
+                <h2>Organizers and Speakers</h2>
+
+                <div class="speakers">
+                    <!-- Huang -->
+                    <div class="speaker-card">
+                <!--         <div class="speaker-photo">
+                            <img src="assets/huang.jpg" alt="Changwu Huang">
+                        </div> -->
+                        <div class="speaker-info">
+                            <div class="speaker-name">Changwu Huang</div>
+                            <div class="speaker-affiliation">
+                                Research Associate Professor,<br> 
+                                Department of Computer Science and Engineering,
+                                Southern University of Science and Technology, Shenzhen, China
+                            </div>
+                            <p>
+                                Changwu Huang received the Bachelor’s degree from Southwest Jiaotong University,
+                                Chengdu, China, in 2010, the Master’s degree from Beijing Jiaotong University,
+                                Beijing, China, in 2013, and the Ph.D. degree from Institut National des Sciences
+                                Appliquées de Rouen Normandie (INSA Rouen Normandie), Rouen, France, in 2018. 
+                                He is currently a Research Associate Professor at the Department of Computer Science and
+                                Engineering of Southern University of Science and Technology, Shenzhen, China. 
+                                His research interests mainly include Artificial Intelligence Ethics, Trustworthy
+                                Artificial Intelligence, Evolutionary Computation, and their practical applications.
+                                More information can be found at <a href="https://changwuhuang.github.io" 
+                                target="https://changwuhuang.github.io">his personal webpage</a>.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Tørresen -->
+                    <div class="speaker-card">
+                        <!-- <div class="speaker-photo">
+                            <img src="assets/jim.jpg" alt="Jim Tørresen">
+                        </div> -->
+                        <div class="speaker-info">
+                            <div class="speaker-name">Jim Tørresen</div>
+                            <div class="speaker-affiliation">
+                                Professor,<br> 
+                                Department of Informatics, University of Oslo, Oslo, Norway
+                            </div>
+                            <p>
+                                Jim Tørresen received the M.Sc. degree in computer architecture and design from the
+                                Norwegian University of Science and Technology, in 1991, and the Dr. (Ing.) (Ph.D.)
+                                degree in computer architecture and design from the University of Trondheim, in 1996.
+                                He is currently a Full Professor with the Department of Informatics, University of
+                                Oslo, and a Principal Investigator with the RITMO Centre for Interdisciplinary Studies
+                                in Rhythm, Time and Motion. His research interests include artificial intelligence,
+                                ethical aspects of AI and robotics, machine learning, robotics, and applying this to
+                                complex real-world applications. He is a member of the Norwegian Academy of
+                                Technological Sciences (NTVA) and the National Committee for Research Ethics in
+                                Science and Technology (NENT). More information can be found at <a href="https://www.jimtoer.no/" 
+                                target="https://www.jimtoer.no/">his personal webpage</a>.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Liu -->
+                    <div class="speaker-card">
+                       <!--  <div class="speaker-photo">
+                            <img src="assets/liu.jpg" alt="Jialin Liu">
+                        </div> -->
+                        <div class="speaker-info">
+                            <div class="speaker-name">Jialin Liu</div>
+                            <div class="speaker-affiliation">
+                                Associate Professor,<br> 
+                                School of Data Science, Lingnan University, Hong Kong SAR, China
+                            </div>
+                            <p>
+                                Jialin Liu received her PhD in 2016 from Université Paris-Saclay, MSc in 2013 from
+                                École Polytechnique & Université Paris-Sud, France, Diplôme d'Ingénieur in 2012 from
+                                Polytech'Paris-Sud, France, and BSc in 2010 from Huazhong University of Science and
+                                Technology, China. Currently, Jialin is an Associate Professor at the School of Data
+                                Science of the Lingnan University, Hong Kong SAR, China. Her main research interests
+                                include, but not limited to, AI in games, optimisation and learning under uncertainty,
+                                evolutionary computation and its applications, and fair machine learning. She is an
+                                Associate Editor of the IEEE Transactions on Games, IEEE Transactions on Evolutionary
+                                Computation, and IEEE Transactions on Artificial Intelligence. She has co-organised
+                                the tutorial “Evolutionary Computation for Games: Learning, Planning, and Designing”
+                                at IEEE CEC2020. She has given a keynote at the IEEE CEC2024. 
+                                More information can be found at <a href="http://www.liujialin.tech/" 
+                                target="http://www.liujialin.tech/">her personal webpage</a>.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Yao -->
+                    <div class="speaker-card">
+                        <!-- <div class="speaker-photo">
+                            <img src="assets/yao.jpeg" alt="Xin Yao">
+                        </div> -->
+                        <div class="speaker-info">
+                            <div class="speaker-name">Xin Yao</div>
+                            <div class="speaker-affiliation">
+                                Vice President (Research and Innovation) and Tong Tin Sun Chair Professor of Machine Learning,<br>
+                                Lingnan University, Hong Kong SAR, China
+                            </div>
+                            <p>
+                                Xin Yao received the B.Sc. degree from the University of Science and Technology of
+                                China (USTC), Hefei, China, in 1982, the M.Sc. degree from the North China Institute
+                                of Computing Technologies, Beijing, China, in 1985, and the Ph.D. degree from USTC, in
+                                1990. Currently, he is a Vice President (Research and Innovation) and a Tong Tin Sun
+                                Chair Professor of Machine Learning with Lingnan University, Hong Kong SAR, China. His
+                                major research interests include evolutionary computation, routing optimisation, and
+                                trustworthy AI. He won the 2001 IEEE Donald G. Fink Prize Paper Award, the 2010, 2016,
+                                and 2017 IEEE Transactions on Evolutionary Computation Outstanding Paper Awards, the
+                                2011 IEEE Transactions on Neural Networks Outstanding Paper Award. He received the 2012
+                                Royal Society Wolfson Research Merit Award, the 2013 IEEE CIS Evolutionary Computation
+                                Pioneer Award, and the 2020 IEEE Frank Rosenblatt Award. He served as the President
+                                from 2014 to 2015 for IEEE Computational Intelligence Society and an Editor-in-Chief
+                                from 2003 to 2008 for IEEE Transactions on Evolutionary Computation. He is an IEEE
+                                Fellow and a Fellow of Hong Kong Academy of Engineering. 
+                                More information can be found at <a href="https://www.ln.edu.hk/po/people/professor-xin-yao" 
+                                target="https://www.ln.edu.hk/po/people/professor-xin-yao">his personal webpage</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Outline -->
+            <section id="outline" class="tab-panel">
+                <h1>Computational Intelligence Approaches to AI Ethics and Governance</h1>
+                <p><span class="h1sub">Tutorial at 2026 IEEE World Congress on Computational Intelligence (WCCI 2026)</span></p>
+                <hr />
+
+                <h2>Outline of the Tutorial</h2>
+                    <h3>Part 1: Introduction to AI Ethics </h3>
+                        <ul style="list-style-type: disc;">
+                            <li>From trustworthy systems to trustworthy AI systems</li>
+                            <li>Brief overview of AI ethics</li>
+                        </ul>
+                    <h3>Part 2: Multi-objective Approaches to Fair Machine Learning </h3>
+                        <ul style="list-style-type: disc;">
+                            <li>General framework</li>
+                            <li>Self-selecting objectives during evolution</li>
+                            <li>Fairness concerns in LLMs and games</li>
+                        </ul>
+                    <h3>Part 3: Explainable Artificial Intelligence </h3>
+                        <ul style="list-style-type: disc;">
+                            <li>A roadmap towards explainable AI</li>
+                            <li>Enhancing explainability of machine learning models</li>
+                        </ul>
+                
+                <br>
+                <img src="assets/Flyer.jpg" alt="flyer", class="image-container">
+            </section>
+
+            <!-- WCCI 2026-->
+            <section id="wcci2026" class="tab-panel">
+                <h1>About WCCI 2026</h1>
+                <hr />
+
+                <p>
+                    The 2026 IEEE World Congress on Computational Intelligence (WCCI) is the world’s leading forum 
+                    for advances in computational intelligence.
+
+                    WCCI 2026 will take place in the beautiful and historic city of Maastricht, 
+                    a vibrant hub of culture, innovation, and international collaboration. 
+                    This congress brings together the three flagship conferences of the IEEE Computational Intelligence Society:
+                    <ul style="list-style-type: disc;">
+                        <li>The International Joint Conference on Neural Networks (IJCNN)</li>
+                        <li>The IEEE International Conference on Fuzzy Systems (FUZZ-IEEE)</li>
+                        <li>The IEEE Congress on Evolutionary Computation (IEEE CEC)</li>
+                    </ul>
+                </p>
+                <p>
+                    For more information on WCCI 2026, please visit:
+                    <br>
+                    <a href="https://attend.ieee.org/wcci-2026/" target="https://attend.ieee.org/wcci-2026/">WCCI 2026 Official Website</a>
+                </p>
+            </section>
+
+        </main>
+    </div>
+</div>
+
+<script>
+    const navItems = document.querySelectorAll('.nav-item');
+    const panels = document.querySelectorAll('.tab-panel');
+
+    navItems.forEach(item => {
+        item.addEventListener('click', () => {
+            navItems.forEach(n => n.classList.remove('active'));
+            item.classList.add('active');
+
+            const targetId = item.getAttribute('data-target');
+            panels.forEach(p => {
+                if (p.id === targetId) {
+                    p.classList.add('active');
+                } else {
+                    p.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
