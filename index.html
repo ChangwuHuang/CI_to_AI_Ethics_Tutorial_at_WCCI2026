@@ -250,6 +250,33 @@
 
                 <h2>Abstract and Learning Objectives</h2>
                 <p>
+                    Artificial Intelligence (AI) ethics is a critical and rapidly evolving domain, with fairness and explainability
+                    as its foundational pillars, alongside privacy, safety, and security. Many papers and books have been published
+                    by researchers and practitioners from different communities, addressing different aspects of fair machine learning (FairML) and explainable AI (XAI). 
+                    However, different work seems to focus on different definitions of fairness and explainability and propose different assessment criteria. 
+                    As a result, a ML model may appear fair according to one assessment criterion but be simultaneously judged unfair 
+                    according to another. Moreover, the notion of XAI itself remains contested and context-dependent, 
+                    raising questions about what “explanation” means, for whom, and for what purpose. 
+                    At the same time, AI functionality is now embedded in a broad range of systems, from general-purpose computing devices to embedded platforms and robots, 
+                    as well as large-scale online services. These diverse deployment contexts raise distinct ethical and governance challenges 
+                    that cut across technical, organizational, and regulatory dimensions.
+                </p>
+
+                <p>
+                    This tutorial provides a structured deep dive into these challenges. We will first offer a brief overview of AI ethics and governance, 
+                    situating RAI (Responsible AI), ESG (Environmental, Social, and Governance) and SDGs (Sustainable Development Goals) 
+                    within a coherent and synergistic conceptual framework. Then, we will introduce the diverse definitions and measurement criteria 
+                    for fairness in machine learning, explore multi-objective approaches to FairML, and highlight specific fairness concerns 
+                    in modern systems like Large Language Models (LLMs) and AI in gaming. Subsequently, we will present a conceptual framework of AI transparency 
+                    that clarifies the understanding and key elements of transparency. Building on this framework, we will articulate what explainability means to 
+                    different people, at different times and for different purposes, how evolutionary multi-objective optimization could be used naturally 
+                    to enhance explainability of machine learning models, and how XAI techniques can be used to enhance the performance of evolutionary algorithms
+                     and neural networks. Finally, the tutorial will turn to AI ethics in embedded systems and robots, where constraints on computation, 
+                     sensing, actuation, and autonomy raise distinctive ethical and governance challenges. The tutorial will conclude by synthesizing 
+                     the interesting synergies between FairML, XAI, and evolutionary computation, suggesting directions for future research and practice in AI ethics and governance.
+                </p>
+
+               <!--  <p>
                     Artificial Intelligence (AI) ethics is a critical and rapidly evolving domain, with fairness and
                     explainability as its foundational pillars. Many papers and books have been published by
                     researchers and practitioners from different communities, addressing different aspects of fair
@@ -269,7 +296,7 @@
                     performance of evolutionary algorithms. The tutorial will conclude by synthesizing the interesting
                     synergies between FairML, XAI, and evolutionary computation, suggesting directions for future
                     research and practice.
-                </p>
+                </p> -->
 
                 <h2>Organizers and Speakers</h2>
 
@@ -301,6 +328,35 @@
                         </div>
                     </div>
 
+                    <!-- Liu -->
+                    <div class="speaker-card">
+                        <!--  <div class="speaker-photo">
+                             <img src="assets/liu.jpg" alt="Jialin Liu">
+                         </div> -->
+                         <div class="speaker-info">
+                             <div class="speaker-name">Jialin Liu</div>
+                             <div class="speaker-affiliation">
+                                 Associate Professor,<br> 
+                                 School of Data Science, Lingnan University, Hong Kong SAR, China
+                             </div>
+                             <p>
+                                 Jialin Liu received her PhD in 2016 from Université Paris-Saclay, MSc in 2013 from
+                                 École Polytechnique & Université Paris-Sud, France, Diplôme d'Ingénieur in 2012 from
+                                 Polytech'Paris-Sud, France, and BSc in 2010 from Huazhong University of Science and
+                                 Technology, China. Currently, Jialin is an Associate Professor at the School of Data
+                                 Science of the Lingnan University, Hong Kong SAR, China. Her main research interests
+                                 include, but not limited to, AI in games, optimisation and learning under uncertainty,
+                                 evolutionary computation and its applications, and fair machine learning. She is an
+                                 Associate Editor of the IEEE Transactions on Games, IEEE Transactions on Evolutionary
+                                 Computation, and IEEE Transactions on Artificial Intelligence. She has co-organised
+                                 the tutorial “Evolutionary Computation for Games: Learning, Planning, and Designing”
+                                 at IEEE CEC2020. She has given a keynote at the IEEE CEC2024. 
+                                 More information can be found at <a href="http://www.liujialin.tech/" 
+                                 target="http://www.liujialin.tech/">her personal webpage</a>.
+                             </p>
+                         </div>
+                     </div>
+
                     <!-- Tørresen -->
                     <div class="speaker-card">
                         <!-- <div class="speaker-photo">
@@ -324,35 +380,6 @@
                                 Technological Sciences (NTVA) and the National Committee for Research Ethics in
                                 Science and Technology (NENT). More information can be found at <a href="https://www.jimtoer.no/" 
                                 target="https://www.jimtoer.no/">his personal webpage</a>.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Liu -->
-                    <div class="speaker-card">
-                       <!--  <div class="speaker-photo">
-                            <img src="assets/liu.jpg" alt="Jialin Liu">
-                        </div> -->
-                        <div class="speaker-info">
-                            <div class="speaker-name">Jialin Liu</div>
-                            <div class="speaker-affiliation">
-                                Associate Professor,<br> 
-                                School of Data Science, Lingnan University, Hong Kong SAR, China
-                            </div>
-                            <p>
-                                Jialin Liu received her PhD in 2016 from Université Paris-Saclay, MSc in 2013 from
-                                École Polytechnique & Université Paris-Sud, France, Diplôme d'Ingénieur in 2012 from
-                                Polytech'Paris-Sud, France, and BSc in 2010 from Huazhong University of Science and
-                                Technology, China. Currently, Jialin is an Associate Professor at the School of Data
-                                Science of the Lingnan University, Hong Kong SAR, China. Her main research interests
-                                include, but not limited to, AI in games, optimisation and learning under uncertainty,
-                                evolutionary computation and its applications, and fair machine learning. She is an
-                                Associate Editor of the IEEE Transactions on Games, IEEE Transactions on Evolutionary
-                                Computation, and IEEE Transactions on Artificial Intelligence. She has co-organised
-                                the tutorial “Evolutionary Computation for Games: Learning, Planning, and Designing”
-                                at IEEE CEC2020. She has given a keynote at the IEEE CEC2024. 
-                                More information can be found at <a href="http://www.liujialin.tech/" 
-                                target="http://www.liujialin.tech/">her personal webpage</a>.
                             </p>
                         </div>
                     </div>
@@ -402,6 +429,7 @@
                         <ul style="list-style-type: disc;">
                             <li>From trustworthy systems to trustworthy AI systems</li>
                             <li>Brief overview of AI ethics</li>
+                            <li>Synergies of RAI (Responsible AI), ESG (Environmental, Social, and Governance) and SDGs (Sustainable Development Goals)</li>
                         </ul>
                     <h3>Part 2: Multi-objective Approaches to Fair Machine Learning </h3>
                         <ul style="list-style-type: disc;">
@@ -411,9 +439,11 @@
                         </ul>
                     <h3>Part 3: Explainable Artificial Intelligence </h3>
                         <ul style="list-style-type: disc;">
+                            <li>A Conceptual Framework of AI Transparency</li>
                             <li>A roadmap towards explainable AI</li>
                             <li>Enhancing explainability of machine learning models</li>
                         </ul>
+                    <h3>Part 4: Ethics in Embedded Systems and Robots</h3>
                 
                 <br>
                 <img src="assets/Flyer.jpg" alt="flyer", class="image-container">
